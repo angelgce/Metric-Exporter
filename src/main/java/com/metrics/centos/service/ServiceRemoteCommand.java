@@ -16,14 +16,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Service
-@RequiredArgsConstructor
 @Data
 @Slf4j
-
 public class ServiceRemoteCommand implements ICommand {
-
-    private final Environment environment;
-
 
     @Value("${app.config.file}")
     private String path;
