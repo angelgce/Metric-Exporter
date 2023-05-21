@@ -43,7 +43,7 @@ public class Metric {
 
     private void validateFields() {
         values.addAll(Arrays.asList(command, query, group, label, regex));
-        //label cant be null (this case i == 3)
+        //label can be null (this case i == 3)
         for (int i = 0; i < values.size(); i++) {
             if (values.get(i) == null && i != 3 || values.get(i).length() < 1 && i != 3)
                 throw new BadRequestException
